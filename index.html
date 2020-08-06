@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="technicalDocument.css">
+        <style>
+            @media only screen and (max-width: 800px){
+            #sqlDocumentation,header,table th{
+             background-color: #866A6D;
+            }
+            #navbar a,#w3Schools{
+            color:#866A6D;
+            }
+            code{
+                border-left: 3px solid #866A6D;
+            }
+        }
+        </style>
+    </head>
+    <title>SQL Documentation</title>
+
+    <body>
+        <nav id="navbar">
+            <header id="sqlDocumentation">SQL Documentation</header>
+            <ul>
+              <li><a class="nav-link" href="#Introduction_to_SQL">Introduction to SQL</a></li>
+              <li><a class="nav-link" href="#SQL_Syntax">SQL Syntax</a></li>
+              <li><a class="nav-link" href="#SQL_CREATE_DATABASE_Statement">SQL Create Database Statement</a></li>
+              <li><a class="nav-link" href="#SQL_CREATE_TABLE_Statement">SQL Create Table Statement</a></li>
+              <li><a class="nav-link" href="#SQL_SELECT_Statement">SQL Select Statement</a></li>
+              <li><a class="nav-link" href="#SQL_UPDATE_Statement">SQL Update Statement</a></li>
+              <li><a class="nav-link" href="#SQL_DELETE_Statement">SQL Delete Statement</a></li>
+              <li><a class="nav-link" href="#Reference">Reference</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction_to_SQL">
+                <header>Introduction to SQL</header>
+                <h3>SQL is a standard language for accessing and manipulating databases</h3>
+                <h1>What is SQL?</h1>
+                <p>
+                    <ul id="list">
+                        <li>SQL stands for Structured Query Language</li>
+                        <li>SQL lets you access and manipulate databases</li>
+                        <li>SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987</li>    
+                    </ul>
+                                 
+                </p>
+                <h1>What Can SQL do?</h1>
+                <p>SQL can execute queries against a database</p>
+                    <ul id="list">
+                        <li>SQL can retrieve data from a database</li>
+                        <li>SQL can insert records in a database</li>
+                        <li>SQL can update records in a database</li>
+                        <li>SQL can delete records from a database</li>
+                        <li>SQL can create new databases</li>
+                        <li>SQL can create new tables in a database</li>
+                        <li>SQL can create stored procedures in a database</li>
+                        <li>SQL can create views in a database</li>
+                        <li>SQL can set permissions on tables, procedures, and views</li>
+                    </ul>
+                    
+                </p>
+               
+                <h1>SQL is a Standard - BUT....</h1>
+                <p>Although SQL is an ANSI/ISO standard, there are different versions of the SQL language.<br/>
+
+                However, to be compliant with the ANSI standard, they all support at least the major commands (such as SELECT, UPDATE, DELETE, INSERT, WHERE) in a similar manner.
+                </p>
+                
+                <h1>Using SQL in Your Web Site</h1>
+                    
+                <p>To build a web site that shows data from a database, you will need:
+                    <ul id="list">
+                        <li>An RDBMS database program (i.e. MS Access, SQL Server, MySQL)</li>
+                        <li>To use a server-side scripting language, like PHP or ASP</li>
+                        <li>To use SQL to get the data you want</li>
+                        <li>To use HTML / CSS to style the page</li>
+                    </ul>
+                </p> 
+
+                <h1>RDBMS</h1>
+                <p>RDBMS stands for Relational Database Management System.RDBMS is the basis for SQL, and for all modern database systems such as MS SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.
+                   The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.
+                   Look at the "Customers" table:
+                </p>
+                
+                <code>SELECT * FROM Customers;</code>                 
+            
+            </section>
+                
+            <section class="main-section" id="SQL_Syntax">
+
+                <header>SQL Syntax</header>
+
+                <h1>Database Tables</h1>
+                <p>A database most often contains one or more tables. Each table is identified by a name (e.g. "Customers" or "Orders"). Tables contain records (rows) with data.<br/>
+
+                    In this tutorial we will use the well-known Northwind sample database (included in MS Access and MS SQL Server).<br/>
+                    
+                    Below is a selection from the "Customers" table:<br/>
+                </p>
+
+                <table style="width:100%">
+                    <tr>
+                      <th>CustomerID</th><th>CustomerName</th><th>ContactName</th><th>Address</th><th>City</th><th>PostalCode</th><th>Country</th>
+                    </tr>
+                    <tr>
+                      <td>1</td><td>Alfreds Futterkiste</td><td>Maria Anders</td><td>Obere Str. 57</td><td>Berlin</td><td>12209</td><td>Germany</td>                 
+                      
+                    </tr>
+                    <tr>
+                      <td>2</td><td>Ana Trujillo Emparedados y helados</td><td>Ana Trujillo</td><td>Avda. de la Constitución 2222</td><td>México D.F.</td><td>05021</td><td>Mexico</td>                     
+                      
+                    </tr>
+                    <tr>
+                        <td>3</td><td>Antonio Moreno Taquería</td><td>Antonio Moreno</td><td>Mataderos 2312</td><td>México D.F.</td><td>05023</td><td>Mexico</td>                    
+                        
+                    </tr>
+                    <tr>
+                        <td>4</td><td>Around the Horn</td><td>Thomas Hardy</td><td>120 Hanover Sq.</td><td>London</td><td>WA1 1DP</td><td>UK</td>                    
+                        
+                    </tr>
+                    <tr>
+                        <td>5</td><td>Berglunds snabbköp</td><td>Christina Berglund</td><td>Berguvsvägen 8</td><td>Luleå</td><td>S-958 22</td><td>Sweden</td>                    
+                        
+                    </tr>
+                </table>
+                <p>The table above contains five records (one for each customer) and seven columns (CustomerID, CustomerName, ContactName, Address, City, PostalCode, and Country).
+
+                </p>
+
+            </section>     
+
+            <section class="main-section" id="SQL_CREATE_DATABASE_Statement">
+                <header>SQL CREATE DATABASE Statement</header>
+
+                <h1>The SQL CREATE DATABASE Statement</h1>
+                <p>The CREATE DATABASE statement is used to create a new SQL database.Syntax</p>
+                <code>
+                    CREATE DATABASE databasename;
+                </code>
+
+                <h1>CREATE DATABASE Example</h1>
+                <p>The following SQL statement creates a database called "testDB":</p>
+                <code>CREATE DATABASE testDB;CREATE DATABASE testDB;</code>
+
+            </section>
+
+            <section class="main-section" id="SQL_CREATE_TABLE_Statement">
+                <header>SQL CREATE TABLE Statement</header>
+                <h1>The SQL CREATE TABLE Statement</h1>
+                <p>The CREATE TABLE statement is used to create a new table in a database.</p><br/>
+                <p>Syntax</p>
+                <code>CREATE TABLE table_name (
+                    column1 datatype,
+                    column2 datatype,
+                    column3 datatype,
+                   ....
+                );</code>
+                <p>The column parameters specify the names of the columns of the table.
+
+                    The datatype parameter specifies the type of data the column can hold (e.g. varchar, integer, date, etc.).</p>
+
+                <h1>SQL CREATE TABLE Example</h1>
+                <p>The following example creates a table called "Persons" that contains five columns: PersonID, LastName, FirstName, Address, and City:</p>
+                <code>CREATE TABLE Persons (
+                    PersonID int,
+                    LastName varchar(255),
+                    FirstName varchar(255),
+                    Address varchar(255),
+                    City varchar(255)
+                );</code>
+                <p>
+                    The PersonID column is of type int and will hold an integer.
+
+The LastName, FirstName, Address, and City columns are of type varchar and will hold characters, and the maximum length for these fields is 255 characters.
+
+The empty "Persons" table will now look like this:
+                </p>
+                <table style="width:100%">
+                    <tr>
+                      <th>PersonID</th>
+                      <th>LastName</th>
+                      <th>FirstName</th>
+                      <th>Address</th>
+                      <th>City</th>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                </table>
+
+                <h1>Create Table Using Another Table</h1>
+                <p>A copy of an existing table can also be created using CREATE TABLE.
+
+                    The new table gets the same column definitions. All columns or specific columns can be selected.
+                    
+                    If you create a new table using an existing table, the new table will be filled with the existing values from the old table.
+                </p>
+                
+                <p>Syntax</p>
+                <code>
+                    CREATE TABLE new_table_name AS
+                        SELECT column1, column2,...
+                        FROM existing_table_name
+                        WHERE ....;
+                </code>
+
+                <p>The following SQL creates a new table called "TestTables" (which is a copy of the "Customers" table): </p>
+                <code>CREATE TABLE TestTable AS
+                    SELECT customername, contactname
+                    FROM customers;</code>
+
+
+            </section>
+
+            <section class="main-section" id="SQL_SELECT_Statement">
+                <header>SQL SELECT Statement</header>
+                <h1>The SQL SELECT Statement</h1>
+                <p>The SELECT statement is used to select data from a database.
+
+                    The data returned is stored in a result table, called the result-set.</p>
+                <h1>SELECT Syntax</h1>
+                <code>SELECT column1, column2, ...
+                    FROM table_name;</code>
+
+                <p>Here, column1, column2, ... are the field names of the table you want to select data from. If you want to select all the fields available in the table, use the following syntax:
+
+                </p>
+                <code>SELECT * FROM table_name;</code>
+
+                <h1>SELECT Column Example</h1>
+                <p>The following SQL statement selects the "CustomerName" and "City" columns from the "Customers" table:</p>
+                <code>SELECT CustomerName, City FROM Customers;</code>
+
+                <h1>SELECT * Example</h1>
+                <p>The following SQL statement selects all the columns from the "Customers" table:</p>
+                <code>SELECT * FROM Customers;</code>
+            </section>
+
+            <section class="main-section" id="SQL_UPDATE_Statement">
+                <header>SQL UPDATE Statement</header>
+                <h1>The SQL UPDATE Statement</h1>
+                <p>The UPDATE statement is used to modify the existing records in a table.</p><br/>
+                <p>UPDATE Syntax</p>
+                <code>UPDATE table_name
+                    SET column1 = value1, column2 = value2, ...
+                    WHERE condition;</code>
+                <h1>UPDATE Table</h1>
+                <p>The following SQL statement updates the first customer (CustomerID = 1) with a new contact person and a new city.</p>
+                <code>UPDATE Customers
+                    SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+                    WHERE CustomerID = 1;</code>
+                <p>The selection from the "Customers" table will now look like this: </p>
+
+                <table style="width:100%">
+                    <tr>
+                      <th>CustomerID</th><th>CustomerName</th><th>ContactName</th><th>Address</th><th>City</th><th>PostalCode</th><th>Country</th>
+                    </tr>
+                    <tr>
+                      <td>1</td><td>Alfreds Futterkiste</td><td>Alfred Schmidt</td><td>Obere Str. 57</td><td>Frankfurt</td><td>12209</td><td>Germany</td>                 
+                      
+                    </tr>
+                    <tr>
+                      <td>2</td><td>Ana Trujillo Emparedados y helados</td><td>Ana Trujillo</td><td>Avda. de la Constitución 2222</td><td>México D.F.</td><td>05021</td><td>Mexico</td>                     
+                      
+                    </tr>
+                    <tr>
+                        <td>3</td><td>Antonio Moreno Taquería</td><td>Antonio Moreno</td><td>Mataderos 2312</td><td>México D.F.</td><td>05023</td><td>Mexico</td>                    
+                        
+                    </tr>
+                    <tr>
+                        <td>4</td><td>Around the Horn</td><td>Thomas Hardy</td><td>120 Hanover Sq.</td><td>London</td><td>WA1 1DP</td><td>UK</td>                    
+                        
+                    </tr>
+                    <tr>
+                        <td>5</td><td>Berglunds snabbköp</td><td>Christina Berglund</td><td>Berguvsvägen 8</td><td>Luleå</td><td>S-958 22</td><td>Sweden</td>                    
+                        
+                    </tr>
+                </table>
+
+            </section>
+            <section class="main-section" id="SQL_DELETE_Statement">
+                <header>SQL DELETE Statement</header>
+                <h1>The SQL DELETE Statement</h1>
+                <p>The DELETE statement is used to delete existing records in a table.</p>
+                <p>DELETE Syntax</p>
+                <code>DELETE FROM table_name WHERE condition;</code>
+
+                <h1>SQL DELETE Example</h1>
+                <p>The following SQL statement deletes the customer "Alfreds Futterkiste" from the "Customers" table:</p>
+                <code>DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';</code>
+                <p>The "Customers" table will now look like this:</p>
+
+                <table style="width:100%">
+                    <tr>
+                      <th>CustomerID</th><th>CustomerName</th><th>ContactName</th><th>Address</th><th>City</th><th>PostalCode</th><th>Country</th>
+                    </tr>
+                    <tr>
+                      <td>2</td><td>Ana Trujillo Emparedados y helados</td><td>Ana Trujillo</td><td>Avda. de la Constitución 2222</td><td>México D.F.</td><td>05021</td><td>Mexico</td>                     
+                      
+                    </tr>
+                    <tr>
+                        <td>3</td><td>Antonio Moreno Taquería</td><td>Antonio Moreno</td><td>Mataderos 2312</td><td>México D.F.</td><td>05023</td><td>Mexico</td>                    
+                        
+                    </tr>
+                    <tr>
+                        <td>4</td><td>Around the Horn</td><td>Thomas Hardy</td><td>120 Hanover Sq.</td><td>London</td><td>WA1 1DP</td><td>UK</td>                    
+                        
+                    </tr>
+                    <tr>
+                        <td>5</td><td>Berglunds snabbköp</td><td>Christina Berglund</td><td>Berguvsvägen 8</td><td>Luleå</td><td>S-958 22</td><td>Sweden</td>                    
+                        
+                    </tr>
+                </table>
+
+                <h1>Delete All Records</h1>
+                <p>
+                It is possible to delete all rows in a table without deleting the table. This means that the table structure, attributes, and indexes will be intact:
+                </p>
+                <code>DELETE FROM table_name;</code>
+                <p>The following SQL statement deletes all rows in the "Customers" table, without deleting the table:</p>
+                <code>DELETE FROM Customers;</code>
+
+            </section>
+
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <p>All the documentation is referred from <a id="w3Schools" href="https://www.w3schools.com/sql/default.asp"> W3Schools </a> </p>
+            </section>
+            
+        </main>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
