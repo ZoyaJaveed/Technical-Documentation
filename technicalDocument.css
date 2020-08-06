@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    background-color: #179CAA;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:30px;
+    height: 50px;
+    padding-top: 20px;
+    padding-left:20px;
+}
+code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #179CAA;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+    margin:20px;
+    padding:10px;
+}
+#navbar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+    background-color: #F5F6F7;
+}
+#main-doc {
+    position: absolute;
+    margin-left: 280px;
+    padding-left:20px;
+    margin-bottom: 110px;
+  }
+  #navbar li {
+    height: 30px;
+    text-align: center;
+    display: block;
+    padding: 10px 30px;    
+    text-decoration: none;
+    cursor: pointer;
+    border-top: 1px solid;
+    font-size: large;
+    font-style: bold;
+}
+#navbar a{
+    color:#179CAA;
+    text-decoration: none;
+}
+#sqlDocumentation{
+    height:80px;
+    text-align: center;
+    padding: 10px 30px;
+    background-color: #179CAA;
+}
+h3,h1{
+    margin:20px;
+    padding:10px;
+}
+p{
+    margin:20px;
+    padding-left:20px;
+}
+#list{
+    list-style-position: inside;
+    padding-left:30px;
+}
+table {
+    margin:3px;
+    padding:10px;
+}
+table th{
+    background-color: #179CAA;
+    border-collapse: collapse;
+    color:white;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+table td{
+    background-color: #F2F2F2;
+    border-collapse: collapse;
+    color:black;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+#w3Schools{
+    color:#0f808d;
+    text-decoration: none;
+}
